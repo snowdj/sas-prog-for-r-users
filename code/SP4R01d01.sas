@@ -386,6 +386,9 @@ proc iml;
 quit;
 
 /***************************************************************************************************/
+
+proc options option=RLANG; run;
+
 /*Call R from SAS/IML*/
 proc iml;
    call ExportDataSetToR("work.birth","birth");
@@ -402,3 +405,5 @@ proc iml;
 
    call ImportDataSetFromR("Rdata","actual.pred");
 quit;
+
+

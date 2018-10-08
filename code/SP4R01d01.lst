@@ -1,0 +1,166 @@
+                                          The SAS System          10:14 Sunday, October 7, 2018   1
+
+                                     The UNIVARIATE Procedure
+                               Variable:  BWT  (Birth Weight, Grams)
+
+                                    Basic Statistical Measures
+ 
+                          Location                    Variability
+
+                      Mean     2944.656     Std Deviation          729.02242
+                      Median   2977.000     Variance                  531474
+                      Mode     2495.000     Range                       4281
+                                            Interquartile Range         1061
+
+              Note: The mode displayed is the smallest of 4 modes with a count of 4.
+                                          The SAS System          10:14 Sunday, October 7, 2018   2
+
+                                        The FREQ Procedure
+
+                                     Birth Weight < 2500 Grams
+ 
+                                                     Cumulative    Cumulative
+                     LOW    Frequency     Percent     Frequency      Percent
+                     ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ
+                     No          130       68.78           130        68.78  
+                     Yes          59       31.22           189       100.00  
+
+
+                                          Smoking Status
+ 
+                                                      Cumulative    Cumulative
+                    SMOKE    Frequency     Percent     Frequency      Percent
+                    ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ
+                      No          115       60.85           115        60.85  
+                      Yes          74       39.15           189       100.00  
+
+
+                                        Hx of Hypertension
+ 
+                                                     Cumulative    Cumulative
+                      HT    Frequency     Percent     Frequency      Percent
+                     ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ
+                     No          177       93.65           177        93.65  
+                     Yes          12        6.35           189       100.00  
+
+
+                                       Hx of Premature Labor
+ 
+                                                     Cumulative    Cumulative
+                     PTL    Frequency     Percent     Frequency      Percent
+                     ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ
+                      0          159       84.13           159        84.13  
+                      1+          30       15.87           189       100.00  
+                            Bayesian Analysis of Low Birth Weight Data                            3
+                                                                      10:14 Sunday, October 7, 2018
+
+                                        The MCMC Procedure
+
+                              Number of Observations Read         189
+                              Number of Observations Used         189
+
+
+                                             Parameters
+ 
+                               Sampling         Initial
+        Block    Parameter     Method             Value    Prior Distribution
+
+            1    beta0         N-Metropolis           0    normal(0, var=100)              
+                 beta1                                0    normal(0, var=100)              
+                 beta2                                0    normal(0, var=100)              
+                 beta3                                0    normal(0, var=100)              
+                 beta4                                0    normal(0, var=100)              
+                            Bayesian Analysis of Low Birth Weight Data                            4
+                                                                      10:14 Sunday, October 7, 2018
+
+                                        The MCMC Procedure
+
+                                       Posterior Summaries
+ 
+                                              Standard               Percentiles
+        Parameter           N        Mean    Deviation          25          50          75
+
+        beta0           20000      0.8812       0.8756      0.2758      0.8693      1.4598
+        beta1           20000      0.5124       0.3461      0.2785      0.5111      0.7460
+        beta2           20000      1.9292       0.7443      1.4288      1.9108      2.4112
+        beta3           20000     -0.0179      0.00685     -0.0224     -0.0178     -0.0132
+        beta4           20000      1.3191       0.4447      1.0220      1.3155      1.6145
+
+
+                                       Posterior Intervals
+ 
+                Parameter    Alpha     Equal-Tail Interval        HPD Interval
+
+                beta0        0.050     -0.7734      2.6647     -0.8075      2.6183
+                beta1        0.050     -0.1665      1.1824     -0.1533      1.1941
+                beta2        0.050      0.5218      3.4477      0.4763      3.3879
+                beta3        0.050     -0.0321    -0.00522     -0.0317    -0.00493
+                beta4        0.050      0.4448      2.1960      0.4384      2.1874
+                            Bayesian Analysis of Low Birth Weight Data                            5
+                                                                      10:14 Sunday, October 7, 2018
+
+                                        The MCMC Procedure
+
+                                    Posterior Autocorrelations
+ 
+                       Parameter      Lag 1      Lag 5     Lag 10     Lag 50
+
+                       beta0         0.2951    -0.0036    -0.0017    -0.0118
+                       beta1         0.2993    -0.0027     0.0011     0.0055
+                       beta2         0.3186    -0.0037    -0.0103    -0.0190
+                       beta3         0.2975    -0.0037    -0.0060    -0.0134
+                       beta4         0.3199    -0.0070     0.0058     0.0007
+                                                                  10:14 Sunday, October 7, 2018   6
+
+                                               deck
+
+                                           AC  AD  AH  AS
+                                           2C  2D  2H  2S
+                                           3C  3D  3H  3S
+                                           4C  4D  4H  4S
+                                           5C  5D  5H  5S
+                                           6C  6D  6H  6S
+                                           7C  7D  7H  7S
+                                           8C  8D  8H  8S
+                                           9C  9D  9H  9S
+                                          10C 10D 10H 10S
+                                           JC  JD  JH  JS
+                                           QC  QD  QH  QS
+                                           KC  KD  KH  KS
+
+
+                         p1      p2      p3      p4      p5      p6      p7
+
+                   ROW1   8C, KH  7C, 4S  KS, 8H  3H, 5D  AS, 7H 10H, 2C  QH, 9S
+                   ROW2   JC, 4S  9C,10S  4D, AH  7S, QS  3S, 5H  5S, JH 10D, KD
+                   ROW3   2S, AS  5C, 7C  JC, 4C 10D, KH  3D, JD  6H, QH  3H,10S
+                   ROW4  10C, 8D  2S, 3H  3D, 4H 10H,10D  8C, 2D  QH, AC  AS, 2C
+                   ROW5   AC, 2H  6H, 9C  2S,10H  7C, JH  QS, 9D  5C, 7D  3D, 8D
+                   ROW6   2C, 3C  7D, 9H  4H, 5D  4D, 6D  AD, 8H  5C, KD  6C,10S
+                   ROW7   KD, 9C  5H, 8D  6S, 7C  QH, 2D  JC, 5S  3D, AH  2S, QD
+                   ROW8   QH,10H  2C, 2D  QC, 8D 10D, 4D  KH, JD  3H, 5S  7C, 7S
+                   ROW9   4H, 7H  JD, 9H  9S, 8D  JS, KD  2H,10H  KS,10S  QH, 5C
+                   ROW10  5D, 4S  JH, KC  3C, QC  5H, 8H  7D, 2D  AC, 2S  3D,10C
+
+                         p8      p9      C1      C2      C3      C4      C5
+
+                   ROW1   JS, QD  JD, QS  AH      6D      6H      3C      8D    
+                   ROW2   3D, QC  3H, 8D  QD      3C      9S      7H      2H    
+                   ROW3   3C, 2C  AH, 4S  9D      JS      2D      3S     10C    
+                   ROW4   JS, AH  8S, KD  QC      4S      AD      4D      7D    
+                   ROW5   6D, 7S  JD, 4H  3H      QH      6C      5S     10S    
+                   ROW6   QC, JD  AH, QH 10H      6S      9S      3D      6H    
+                   ROW7  10S, 8C  JS, 4S 10D      AC      7D      JD      5D    
+                   ROW8   JH, 2S  5D, 8C  9S      KD      3S      AC      8S    
+                   ROW9   KH,10D  9C, JC  3D      8H      7C      QC      3H    
+                   ROW10  AD, KD  JS, QH 10S      QS      8S      4D      KS    
+
+
+                                       count     hands         p
+
+                                          48     10000    0.0048
+                                                                  10:14 Sunday, October 7, 2018   7
+
+                                               power
+
+                                                 0.806

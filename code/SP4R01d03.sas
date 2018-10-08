@@ -268,7 +268,7 @@ run;
 
 /*Baseball*/
 proc import out=sp4r.baseball 
-   datafile= "&path\baseball.csv" DBMS=CSV REPLACE;
+   datafile= "&path\data\baseball.csv" DBMS=CSV REPLACE;
    getnames=yes;
    datarow=2; 
 run;
