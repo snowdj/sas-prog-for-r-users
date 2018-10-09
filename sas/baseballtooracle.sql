@@ -1,0 +1,154 @@
+-- Create table
+create table BASEBALL
+(
+  oid   NUMBER,
+  id    VARCHAR2(25),
+  year  DATE,
+  stint NUMBER,
+  team  VARCHAR2(5),
+  lg    VARCHAR2(5),
+  g     NUMBER,
+  ab    NUMBER,
+  r     NUMBER,
+  h     NUMBER,
+  x2b   NUMBER,
+  x3b   NUMBER,
+  hr    NUMBER,
+  rbi   NUMBER,
+  sb    NUMBER,
+  cs    NUMBER,
+  bb    NUMBER,
+  so    NUMBER,
+  ibb   NUMBER,
+  hbp   NUMBER,
+  sh    NUMBER,
+  sf    NUMBER,
+  gidp  NUMBER
+)
+tablespace SYSTEM
+  pctfree 10
+  pctused 40
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+-- Drop table
+drop table baseball cascade constraints;
+-- Create table
+create table baseball
+(
+  oid   number, 
+  id    VARCHAR2(20),
+  year  DATE,
+  stint NUMBER,
+  team  VARCHAR2(3),
+  lg    VARCHAR2(2),
+  g     NUMBER,
+  ab    NUMBER,
+  r     NUMBER,
+  h     NUMBER,
+  x2b   NUMBER,
+  x3b   NUMBER,
+  hr    NUMBER,
+  rbi   NUMBER,
+  sb    NUMBER,
+  cs    NUMBER,
+  bb    NUMBER,
+  so    NUMBER,
+  ibb   NUMBER,
+  hbp   NUMBER,
+  sh    NUMBER,
+  sf    NUMBER,
+  gidp  NUMBER
+)
+tablespace SYSTEM
+  pctfree 10
+  pctused 40
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table baseball
+  add constraint IDCS unique (ID)
+  using index 
+  tablespace SYSTEM
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+
+-- Drop table
+drop table TEXT_IMPORT cascade constraints;
+-- Create table
+create table TEXT_IMPORT
+(
+  id    VARCHAR2(20),
+  year  DATE,
+  stint NUMBER,
+  team  VARCHAR2(3),
+  lg    VARCHAR2(2),
+  g     NUMBER,
+  ab    NUMBER,
+  r     NUMBER,
+  h     NUMBER,
+  x2b   NUMBER,
+  x3b   NUMBER,
+  hr    NUMBER,
+  rbi   NUMBER,
+  sb    NUMBER,
+  cs    NUMBER,
+  bb    NUMBER,
+  so    NUMBER,
+  ibb   NUMBER,
+  hbp   NUMBER,
+  sh    NUMBER,
+  sf    NUMBER,
+  gidp  NUMBER
+)
+tablespace SYSTEM
+  pctfree 10
+  pctused 40
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TEXT_IMPORT
+  add constraint IDCS unique (ID)
+  using index 
+  tablespace SYSTEM
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
